@@ -1,6 +1,74 @@
 @CMSAPI_HostAddress = http://localhost:5011
 
-GET {{CMSAPI_HostAddress}}/weatherforecast/
+### Get all students
+GET {{CMSAPI_HostAddress}}/api/student
+Accept: application/json
+
+###
+
+### Get student by id
+GET {{CMSAPI_HostAddress}}/api/student/1
+Accept: application/json
+
+###
+
+### Create a student
+POST {{CMSAPI_HostAddress}}/api/student
+Content-Type: application/json
+Accept: application/json
+
+{
+  "studentCode": "S2025001",
+  "fullName": "Jane Doe",
+  "email": "jane.doe@example.com",
+  "phone": "+1234567890",
+  "dateOfBirth": "2002-05-12T00:00:00",
+  "address": "123 Main St",
+  "campusId": 1,
+  "departmentId": 2,
+  "courseId": 3,
+  "batch": "2025",
+  "admissionDate": "2025-08-01T00:00:00",
+  "guardianName": "John Doe",
+  "guardianPhone": "+1987654321",
+  "guardianEmail": "guardian@example.com"
+}
+
+###
+
+### Update a student (replace id and fields as needed)
+PUT {{CMSAPI_HostAddress}}/api/student/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "studentId": 1,
+  "studentCode": "S2025001",
+  "fullName": "Jane A. Doe",
+  "email": "jane.doe@example.com",
+  "phone": "+1234567899",
+  "dateOfBirth": "2002-05-12T00:00:00",
+  "address": "456 Elm St",
+  "campusId": 1,
+  "departmentId": 2,
+  "courseId": 4,
+  "batch": "2025",
+  "admissionDate": "2025-08-01T00:00:00",
+  "guardianName": "John Doe",
+  "guardianPhone": "+1987654321",
+  "guardianEmail": "guardian@example.com"
+}
+
+###
+
+### Update status (PATCH)
+PATCH {{CMSAPI_HostAddress}}/api/student/status/1?status=Active
+Accept: application/json
+
+###
+
+### Delete a student
+DELETE {{CMSAPI_HostAddress}}/api/student/1
 Accept: application/json
 
 ###

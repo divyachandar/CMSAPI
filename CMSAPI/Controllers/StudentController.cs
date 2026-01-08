@@ -117,8 +117,11 @@ namespace CMSAPI.Controllers
             cmd.Parameters.AddWithValue("@FullName", dto.FullName);
             cmd.Parameters.AddWithValue("@Phone", dto.Phone);
             cmd.Parameters.AddWithValue("@Address", dto.Address ?? (object)DBNull.Value);
+            cmd.Parameters.AddWithValue("@DepartmentId", dto.DepartmentId);
             cmd.Parameters.AddWithValue("@CourseId", dto.CourseId);
-            cmd.Parameters.AddWithValue("@Batch", dto.Batch);
+            cmd.Parameters.AddWithValue("@GuardianName", dto.GuardianName ?? (object)DBNull.Value);
+            cmd.Parameters.AddWithValue("@GuardianPhone", dto.GuardianPhone ?? (object)DBNull.Value);
+            cmd.Parameters.AddWithValue("@GuardianEmail", dto.GuardianEmail ?? (object)DBNull.Value);
 
             con.Open();
             cmd.ExecuteNonQuery();
@@ -147,15 +150,27 @@ namespace CMSAPI.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            using var con = GetConnection();
-            using var cmd = new SqlCommand("sp_Student_Delete", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@StudentId", id);
+            try
+            {
+                using var con = GetConnection();
+                using var cmd = new SqlCommand("sp_Student_Delete", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@StudentId", id);
 
-            con.Open();
-            cmd.ExecuteNonQuery();
+                con.Open();
+                cmd.ExecuteNonQuery();
 
-            return Ok(new { message = "Student deleted successfully" });
+                return Ok(new { message = "Student deleted successfully" });
+            }
+            catch (SqlException ex)
+            {
+                // Return specific database error (e.g., constraint violations)
+                return StatusCode(500, new { message = $"Database Error: {ex.Message}" });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = $"An error occurred: {ex.Message}" });
+            }
         }
 
         // Helper Mapper

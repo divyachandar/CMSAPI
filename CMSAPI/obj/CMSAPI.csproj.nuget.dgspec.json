@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LENOVO\\webapi\\CMSAPI\\CMSAPI\\CMSAPI.csproj": {}
+    "D:\\CMS\\CMSAPI\\CMSAPI\\CMSAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LENOVO\\webapi\\CMSAPI\\CMSAPI\\CMSAPI.csproj": {
+    "D:\\CMS\\CMSAPI\\CMSAPI\\CMSAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\webapi\\CMSAPI\\CMSAPI\\CMSAPI.csproj",
+        "projectUniqueName": "D:\\CMS\\CMSAPI\\CMSAPI\\CMSAPI.csproj",
         "projectName": "CMSAPI",
-        "projectPath": "C:\\Users\\LENOVO\\webapi\\CMSAPI\\CMSAPI\\CMSAPI.csproj",
+        "projectPath": "D:\\CMS\\CMSAPI\\CMSAPI\\CMSAPI.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\webapi\\CMSAPI\\CMSAPI\\obj\\",
+        "outputPath": "D:\\CMS\\CMSAPI\\CMSAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

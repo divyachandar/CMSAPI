@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\CMS\\CMSAPI\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E460A86E-A764-4375-BF9D-6BC072B6C104}|CMSAPI\\CMSAPI.csproj|d:\\cms\\cmsapi\\cmsapi\\cmsapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{E460A86E-A764-4375-BF9D-6BC072B6C104}|CMSAPI\\CMSAPI.csproj|solutionrelative:cmsapi\\cmsapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 61,
           "Children": [
             {
               "$type": "Bookmark",
@@ -250,6 +255,23 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CMSAPI.http",
+              "DocumentMoniker": "D:\\CMS\\CMSAPI\\CMSAPI\\CMSAPI.http",
+              "RelativeDocumentMoniker": "CMSAPI\\CMSAPI.http",
+              "ToolTip": "D:\\CMS\\CMSAPI\\CMSAPI\\CMSAPI.http",
+              "RelativeToolTip": "CMSAPI\\CMSAPI.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-01-05T05:08:32.617Z",
+              "EditorCaption": ""
             }
           ]
         }
